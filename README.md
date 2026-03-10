@@ -1,30 +1,49 @@
 # 🩺 MedRelay
-### Decentralized. Patient-Centric. Offline-First EMR.
+### Frictionless Medical Data Interoperability & Privacy Control
 
 ![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)
 ![Platform: Flutter](https://img.shields.io/badge/Platform-Flutter-02569B?logo=flutter)
 
-**MedRelay** is a high-performance, open-source Electronic Medical Record (EMR) ecosystem built entirely with **Flutter**. It bridges the gap between private clinics and patients in the Philippines by treating the patient’s smartphone as the primary, secure transport layer for medical history.
+**MedRelay** is an open-source, decentralized infrastructure built to eliminate the friction of sharing medical records between healthcare facilities. Built with **Flutter**, it provides a secure "handshake" protocol that allows life-saving data to flow where it is needed, when it is needed, while ensuring patients maintain absolute control over their sensitive information.
 
 ---
 
-## 🚀 The Vision
-Most EMR systems are built for the cloud first. MedRelay is built for the **local environment first**. 
+## 🚀 The Vision: Logistics for Life-Saving Data
+MedRelay is **not designed to replace existing EMR systems.** Its true purpose is to smoothen the logistics of life-saving data in a secure, efficient way. 
 
-By using a **Dual-App Architecture**, we provide tailored experiences for two distinct users:
-1. **The Clinician (Desktop):** A data-dense, keyboard-optimized interface for Windows/Linux. Built for complex medical management and 100% offline clinic operations.
-2. **The Patient (Mobile):** A simplified, touch-first Android/iOS experience for portability and personal record ownership.
+In the current landscape, medical data is trapped in silos. MedRelay acts as the "connective tissue" that:
 
-## 🛠️ Unified Engine, Tailored UI
-We use **Flutter** for both platforms to ensure native performance and absolute predictability across devices. While the UI is distinct for each use case, they share a robust technical core.
+1. **Reduces Friction:** Enables instant, secure data transfers between Facility A and Hospital B without complex, proprietary integrations.
+2. **Empowers Privacy:** Puts the "Permission Key" in the patient's hands. Data only moves when the patient explicitly authorizes it.
+3. **Ensures Reliability:** A local-first architecture designed for the real-world challenges of intermittent connectivity, ensuring that critical history is available even when the cloud is not.
 
-* **MedRelay Desktop:** Native Windows/Linux suite. Optimized for high-density data entry and patient history visualization.
-* **MedRelay Mobile:** Native Android/iOS app. Optimized for "On-the-go" access, secure QR handshakes, and encrypted personal backups.
-* **Shared Core:** A unified Dart logic layer handles AES-256 encryption, SQLite persistence, and Relay API communication.
+## 🛠️ Unified Engine, Purpose-Built UI
+We use **Flutter** for both platforms to ensure native performance and 100% predictability in data handling, while providing tailored experiences for each stakeholder:
 
-## 📁 Project Structure
+* **MedRelay Desktop (The Clinician Hub):** A high-performance Windows/Linux utility designed for rapid data retrieval and record updates. It works alongside existing EMRs to bridge the gap between facilities.
+* **MedRelay Mobile (The Privacy Controller):** An Android/iOS app that acts as the patient's personal authorization center. It manages encryption keys, sharing permissions, and serves as a secure storage vault.
+* **Shared Core:** A unified Dart library for AES-256 encryption, decentralized identity (DID) logic, and SQLite persistence.
+
+## ⚖️ Why AGPLv3?
+MedRelay is licensed under the **GNU Affero General Public License v3.0**. This choice is fundamental to our mission:
+
+* **Auditability:** Privacy-first software must be transparent. AGPLv3 ensures the code is always open for public security audits.
+* **Community Standards:** It prevents any single entity from "forking" the project to create a proprietary, closed-off network that restricts data flow.
+* **Reciprocity:** Any improvements made to the sharing protocol by service providers must be shared back, ensuring the "bridge" between facilities continues to improve for everyone.
+
+## 💳 Business Model
+MedRelay is **Free and Open Source** for patients. We offer a **Subscription-based Service** for clinics which includes:
+
+* **Access to the Global Relay Infrastructure** for high-speed record synchronization.
+* **Automated, encrypted backup and recovery services.**
+* **Verified participation** in the MedRelay secure sharing network.
+
+---
+Developed by **Rara Studios** and **O-rensa** *Eliminating friction and restoring privacy in healthcare.*
+
+### 📁 Project Structure
 ```text
-├── medrelay_core/         # Shared Logic: Encryption, Models, API Client
-├── medrelay_desktop/      # Desktop Suite (Data-Dense UI for Clinics)
-├── medrelay_mobile/       # Mobile App (Patient-Centric UI)
+├── medrelay_core/         # Shared Logic: Encryption, Permission Handshakes, API Client
+├── medrelay_desktop/      # Clinician Hub (Data Sharing & Retrieval)
+├── medrelay_mobile/       # Privacy Controller (Authorization & Patient Vault)
 └── medrelay_relay/        # Go-based Relay Server (Subscription Layer)
