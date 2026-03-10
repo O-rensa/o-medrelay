@@ -24,6 +24,13 @@ We use **Flutter** for both platforms to ensure native performance and 100% pred
 * **MedRelay Mobile (The Privacy Controller):** An Android/iOS app that acts as the patient's personal authorization center. It manages encryption keys, sharing permissions, and serves as a secure storage vault.
 * **Shared Core:** A unified Dart library for AES-256 encryption, decentralized identity (DID) logic, and SQLite persistence.
 
+## 🔐 Security Architecture
+MedRelay follows the principle of **Zero-Knowledge Architecture**. Because our code is open-source, the security of the data does not rely on "secrets" in the code, but on mathematically proven encryption:
+
+* **End-to-End Encryption (E2EE):** Data is encrypted locally on the device (Desktop or Mobile) using **AES-256** before it ever leaves the facility or the patient's hand.
+* **Open Trust:** By open-sourcing our encryption logic, we allow the medical community and security researchers to audit our code. This proves that **Rara Studios** and the MedRelay relay servers never have access to the plain-text medical records.
+* **Patient-Controlled Keys:** The encryption keys stay with the patient. Even if our relay servers are compromised, the data remains a useless, encrypted "black box" to any attacker.
+
 ## ⚖️ Why AGPLv3?
 MedRelay is licensed under the **GNU Affero General Public License v3.0**. This choice is fundamental to our mission:
 
@@ -34,12 +41,12 @@ MedRelay is licensed under the **GNU Affero General Public License v3.0**. This 
 ## 💳 Business Model
 MedRelay is **Free and Open Source** for patients. We offer a **Subscription-based Service** for clinics which includes:
 
-* **Access to the Global Relay Infrastructure** for high-speed record synchronization.
-* **Automated, encrypted backup and recovery services.**
-* **Verified participation** in the MedRelay secure sharing network.
+* **Access to the Secure Relay Infrastructure** for clinic-to-clinic data handshakes and record indexing.
+* **Verified Participation** in the MedRelay secure sharing network to build trust with patients.
+* **Seamless Integration** tools for syncing encrypted data via the patient's personal cloud (Google Drive).
 
 ---
-Developed by **Rara Studios** and **O-rensa** *Eliminating friction and restoring privacy in healthcare.*
+Developed with ❤️ by **Rara Studios** *Eliminating friction and restoring privacy in healthcare.*
 
 ### 📁 Project Structure
 ```text
